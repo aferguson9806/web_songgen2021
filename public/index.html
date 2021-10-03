@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Generator</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <h1>Song Generator</h1>
+    <div class = prefSelect>
+        
+        
+        <h2>Select your preferences</h2>
+
+        <form name="songPref" action="/api" method=post>
+            <ul class="flex-outer">
+                
+                <li>
+                    <label for="songname">Song Name</label>
+                    <input name="songname" type="text" id="songname" placeholder="Enter a song name">
+                </li>
+
+                <li>
+                    <p>Select an instrument</p>
+                    <ul class = "flex-inner">
+                        <li>
+                            <input name="instrument" type="radio" id="sax" value="sax">
+                            <label for="instrument">Saxophone</label>
+                        </li>
+
+                        <li>
+                            <input name="instrument" type="radio" id="piano" value="piano">
+                            <label for="instrument">Piano</label>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <p>Enter a duration</p>
+                    <input name="duration" type="number" id="duration">
+                    <label for="duration">Seconds</label>
+                </li>
+
+                <li>
+                    <button name="submitbutton" type="submit" id="submitButton">Submit</button>
+                </li>
+            </ul>
+        </form>
+    
+    
+    </div>
+</body>
+</html>
