@@ -5,51 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song Generator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome!</h1>
-    <h1>Song Generator</h1>
+    <div class="container">
     <div class = prefSelect>
         
         
-        <h2>Select your preferences</h2>
+            <h2>Select your preferences</h2>
 
-        <form name="songPref" action="/api" method=post>
-            <ul class="flex-outer">
+            <form name="songPref" action="/results" method=post>
                 
-                <li>
-                    <label for="songname">Song Name</label>
-                    <input name="songname" type="text" id="songname" placeholder="Enter a song name">
-                </li>
+                
+                <ul class="flex-outer">
 
-                <li>
-                    <p>Select an instrument</p>
-                    <ul class = "flex-inner">
-                        <li>
-                            <input name="instrument" type="radio" id="sax" value="sax">
-                            <label for="instrument">Saxophone</label>
-                        </li>
+                    <li class="instrumentSelector">
+                        <p>Select an instrument</p>
+                        <ul class = "flex-inner">
+                            <li id="saxplusLabel">
+                                <input name="instrument" type="radio" id="sax" value="sax">
+                                <label for="instrument">Saxophone</label>
+                            </li>
 
-                        <li>
-                            <input name="instrument" type="radio" id="piano" value="piano">
-                            <label for="instrument">Piano</label>
-                        </li>
-                    </ul>
-                </li>
+                            <li>
+                                <input name="instrument" type="radio" id="piano" value="piano">
+                                <label for="instrument">Piano</label>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <label for="songname">Song Name</label>
+                        <input name="songname" type="text" id="songname" placeholder="Enter a song name">
+                    </li>
 
-                <li>
-                    <p>Enter a duration</p>
-                    <input name="duration" type="number" id="duration">
-                    <label for="duration">Seconds</label>
-                </li>
+                    <li>
+                        <label for="keySelect">Select a Key</label>
+                        <select size=4 name="keySelect" id="keySelect">
+                            <option value="chromatic">Chromatic</option>
+                            <option value="cmajor">C Major</option>
+                            <option value="csharpmajor">C# Major</option>
+                            <option value="dmajor">D Major</option>
+                            <option value="dsharpmajor">D# Major</option>
+                            <option value="emajor">E Major</option>
+                            <option value="fmajor">F Major</option>
+                            <option value="fsharpmajor">F# Major</option>
+                            <option value="gmajor">G Major</option>
+                            <option value="gsharpmajor">G# Major</option>
+                            <option value="amajor">A Major</option>
+                            <option value="asharpmajor">A# Major</option>
+                            
+                            <option value="cminor">C Minor</option>
+                            <option value="csharpminor">C# Minor</option>
+                            <option value="dminor">D Minor</option>
+                            <option value="dsharpminor">D# Minor</option>
+                            <option value="eminor">E Minor</option>
+                            <option value="fminor">F Minor</option>
+                            <option value="fsharpminor">F# Minor</option>
+                            <option value="gminor">G Minor</option>
+                            <option value="gsharpminor">G# Minor</option>
+                            <option value="aminor">A Minor</option>
+                            <option value="asharpminor">A# Minor</option>
+                        </select>
+                    </li>
 
-                <li>
-                    <button name="submitbutton" type="submit" id="submitButton">Submit</button>
-                </li>
-            </ul>
-        </form>
-    
-    
+                    <li>
+                        <p>Enter a duration</p>
+                        <input name="duration" type="number" id="duration" placeholder="Duration in seconds">
+                    </li>
+
+                    <li id="submitPref">
+                        <button name="submitbutton" type="submit" id="submitButton">Submit</button>
+                    </li>
+
+
+                </ul>
+            
+            
+            </form>
+        
+        
+        </div>
+
     </div>
+
+    <footer>
+        <img class="footerimg" src="footerimage.png">
+    </footer>
 </body>
 </html>
