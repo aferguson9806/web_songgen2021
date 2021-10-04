@@ -25,6 +25,10 @@ h1 {
     width: 175px;
 }
 
+.flex-inner {
+    padding-left: 0px;;
+}
+
 .flex-outer li,
 .flex-inner {
     display:flex;

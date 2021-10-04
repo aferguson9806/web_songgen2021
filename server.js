@@ -48,7 +48,7 @@ app.route('/results')
     console.log('Now send something back to your client');
 
 
-    res.send({ data: req.body })
+    res.send({data: req.body})
   });
 
 app.listen(port, () => {
