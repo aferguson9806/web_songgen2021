@@ -4,6 +4,8 @@ const choice = document.getElementsByName('instrument');
 const songName = document.getElementById('songname');
 const songKey = document.getElementById('keySelect');
 const songDuration = document.getElementById('duration')
+const screenDiv = document.getElementsByClassName('container')
+
 
 
 function findChecked() {
@@ -24,5 +26,7 @@ songForm.addEventListener("submit", async (event) => {
     localStorage.setItem('songDuration', songDuration.value);
 
     console.log(localStorage)
-
+    songForm.reset();
+    
+    await fetch('/song')
 });

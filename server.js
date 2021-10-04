@@ -51,6 +51,20 @@ app.route('/results')
     res.send({data: req.body})
   });
 
+
+app.route('/song')
+.get(async (req, res) => {
+  console.log(req.query);
+  const python = child_process.spawn('py', ['public/songgenv2.py', localStorage.getItem("instrument"), localStorage.getItem("songName"), localStorage.getItem("songKey"), localStorage.getItem("songDuration")]);
+  python.stdout.on('data', function (data) {
+    console.log('Pipe data from python script ...');
+    });
+  python.on('close', (code) => {
+    console.log(`child process close all stdio with code ${code}`);
+    // send data to browser
+    });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });
