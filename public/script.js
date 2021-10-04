@@ -19,14 +19,21 @@ function findChecked() {
 
 songForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    //console.log(duration.value);
-    localStorage.setItem('instrument', findChecked().value)
-    localStorage.setItem('songName', songName.value);
-    localStorage.setItem('songKey', songKey.options[songKey.selectedIndex].text);
-    localStorage.setItem('songDuration', songDuration.value);
 
-    console.log(localStorage)
+    const data = {'instrument': findChecked().value, 'songName': songName.value.replace(/\s/g, ""), 'songKey': songKey.options[songKey.selectedIndex].value, 'songDuration': songDuration.value};
+    console.log(data);
+
+
+    //console.log(localStorage)
     songForm.reset();
-    
-    await fetch('/song')
+    //console.log(JSON.stringify(data));
+    fetch("/song", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+          },
+        body: JSON.stringify(data)
+      }).then(res => {
+        console.log("Request complete! response:", res);
+      });
 });

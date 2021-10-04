@@ -53,15 +53,21 @@ app.route('/results')
 
 
 app.route('/song')
-.get(async (req, res) => {
-  console.log(req.query);
-  const python = child_process.spawn('py', ['public/songgenv2.py', localStorage.getItem("instrument"), localStorage.getItem("songName"), localStorage.getItem("songKey"), localStorage.getItem("songDuration")]);
+.post(async (req, res) => {
+  //console.log(req.body.songDuration);
+  console.log(typeof(req.body.instrument));
+  console.log(typeof(req.body.songName));
+  console.log(typeof(req.body.songKey));
+  console.log(typeof(parseInt(req.body.songDuration)));
+    const python = child_process.spawn('py', ['public/songgenv2.py', req.body.instrument, req.body.songName, req.body.songKey, parseInt(req.body.songDuration)], {
+      stdio: ['inherit']
+    });
   python.stdout.on('data', function (data) {
     console.log('Pipe data from python script ...');
     });
   python.on('close', (code) => {
     console.log(`child process close all stdio with code ${code}`);
-    // send data to browser
+    res.send(req.body)
     });
 });
 

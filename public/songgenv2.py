@@ -316,10 +316,10 @@ def parse_args(args_list):
     
     
     parser = argparse.ArgumentParser()
-    parser.add_argument('instrument', type = str, help = 'the instrument to be used')
-    parser.add_argument('name', type = str, help = 'The annual interest rate, should be a float between 0 and 1')
-    parser.add_argument('key', type = str, help = 'The term of the mortgage, in years, should be a positive integer')
-    parser.add_argument('duration', type = int, help = 'The number of payments per year, should be a positive integer')
+    parser.add_argument('instrument', default = "sax", type = str, help = 'the instrument to be used')
+    parser.add_argument('name', default = "andrew", type = str, help = 'The annual interest rate, should be a float between 0 and 1')
+    parser.add_argument('key', default = "gmajor", type = str, help = 'The term of the mortgage, in years, should be a positive integer')
+    parser.add_argument('duration', default= 12, type = int, help = 'The number of payments per year, should be a positive integer')
     
     args = parser.parse_args(args_list)
     
@@ -328,15 +328,11 @@ def parse_args(args_list):
     return args
 
 
-
-
 if __name__ == "__main__":
-    #play(AudioSegment.from_wav("soundfiles/saxa.wav"))
-    #silence.min_silence_len(-500)
     arguments = parse_args(sys.argv[1:])
-    mysong = Song(arguments.instrument, arguments.name, arguments.key, arguments.duration)
+    mysong = Song(arguments.instrument, arguments.name, arguments.key, int(arguments.duration))
     mysong.play_song()
-    #mysong.compile_song()
+    print("thanks")
     
 
         
