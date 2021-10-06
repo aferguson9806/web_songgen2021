@@ -4,7 +4,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-import child_process from 'child_process';
+import {PythonShell} from 'python-shell';
 
 dotenv.config();
 
@@ -59,16 +59,17 @@ app.route('/song')
   console.log(typeof(req.body.songName));
   console.log(typeof(req.body.songKey));
   console.log(typeof(parseInt(req.body.songDuration)));
-    const python = child_process.spawn('py', ['public/songgenv2.py', req.body.instrument, req.body.songName, req.body.songKey, parseInt(req.body.songDuration)], {
-      stdio: ['inherit']
-    });
-  python.stdout.on('data', function (data) {
-    console.log('Pipe data from python script ...');
-    });
-  python.on('close', (code) => {
-    console.log(`child process close all stdio with code ${code}`);
-    res.send(req.body)
-    });
+  
+  let options = {
+    //scriptPath: 'Users/aferg/OneDrive/Documents/GitHub/web_songgen2021/public/',
+    args: [req.body.instrument, req.body.songName, req.body.songKey, parseInt(req.body.songDuration)]
+  };
+
+  PythonShell.run('public/songgenv2.py', options, function (err, results) {
+    if (err) throw err;
+    console.log('results: %j', results);
+  })
+
 });
 
 app.listen(port, () => {
