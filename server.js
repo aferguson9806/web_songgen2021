@@ -52,6 +52,8 @@ app.route('/results')
   });
 
 
+
+
 app.route('/song')
 .post(async (req, res) => {
   //console.log(req.body.songDuration);
@@ -68,7 +70,11 @@ app.route('/song')
   PythonShell.run('public/songgenv2.py', options, function (err, results) {
     if (err) throw err;
     console.log('results: %j', results);
+    res.send("okay!")
   })
+
+
+
 
 });
 

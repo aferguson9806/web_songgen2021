@@ -2,6 +2,7 @@ import random
 import time
 from pydub import AudioSegment
 from pydub.playback import play
+import wave
 import argparse
 import sys
 
@@ -56,16 +57,6 @@ class Song:
         
         #LIST TO BE TURNED INTO FILE
         self.wavfiles = []
-        
-    def note_length_gen(self, file_path):
-        sound = AudioSegment.from_wav(file_path)
-        notes = [1, 1.25, 1.5]
-        note_choice = random.choice(notes)
-        new_sound = sound._spawn(sound.raw_data, overrides={
-            "frame_rate": int(sound.frame_rate * note_choice)
-        })
-        
-        return new_sound.set_frame_rate(sound.frame_rate)
 
         
     def c5(self):
@@ -79,7 +70,7 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianolowc.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianolowc.wav"))
             return "public/soundfiles/pianolowc.wav"
         elif self.instrument.lower() == 'sax':
             play(AudioSegment.from_wav("public/soundfiles/saxlowc.wav"))
@@ -96,10 +87,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianoc#.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianoc#.wav"))
             return "public/soundfiles/pianoc#.wav"
         elif self.instrument.lower() == 'sax':
-            play(self.note_length_gen("public/soundfiles/saxc#.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/saxc#.wav"))
             return "public/soundfiles/saxc#.wav"
         
     def d5(self):
@@ -113,10 +104,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianod.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianod.wav"))
             return "public/soundfiles/pianod.wav"
         elif self.instrument.lower() == 'sax':
-            play(self.note_length_gen("public/soundfiles/saxd.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/saxd.wav"))
             return "public/soundfiles/saxd.wav"
         
     def d5sharp(self):
@@ -130,10 +121,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianod#.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianod#.wav"))
             return "public/soundfiles/pianod#.wav"
         elif self.instrument.lower() == 'sax':
-            play(self.note_length_gen("public/soundfiles/saxd#.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/saxd#.wav"))
             return "public/soundfiles/saxd#.wav"
         
     def e5(self):
@@ -147,10 +138,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianoe.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianoe.wav"))
             return "public/soundfiles/pianoe.wav"
         elif self.instrument.lower() == 'sax':
-            play(self.note_length_gen("public/soundfiles/saxe.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/saxe.wav"))
             return "public/soundfiles/saxe.wav"
     def f5(self):
         
@@ -163,10 +154,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianof.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianof.wav"))
             return "public/soundfiles/pianof.wav"
         elif self.instrument.lower() == 'sax':
-            play(self.note_length_gen("public/soundfiles/saxf.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/saxf.wav"))
             return "public/soundfiles/saxf.wav"
         
     def f5sharp(self):
@@ -180,10 +171,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianof#.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianof#.wav"))
             return "public/soundfiles/pianof#.wav"
         elif self.instrument.lower() == 'sax':
-            play(self.note_length_gen("public/soundfiles/saxf#.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/saxf#.wav"))
             return "public/soundfiles/saxf#.wav"
         
     def g5(self):
@@ -197,10 +188,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianog.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianog.wav"))
             return "public/soundfiles/pianog.wav"
         elif self.instrument.lower() == 'sax':
-            play(self.note_length_gen("public/soundfiles/saxg.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/saxg.wav"))
             return "public/soundfiles/saxg.wav"
         
     def g5sharp(self):
@@ -214,10 +205,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianog#.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianog#.wav"))
             return "public/soundfiles/pianog#.wav"
         elif self.instrument.lower() == 'sax':
-            play(self.note_length_gen("public/soundfiles/saxg#.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/saxg#.wav"))
             return "public/soundfiles/saxg#.wav"
         
     def a5(self):
@@ -231,10 +222,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianoa.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianoa.wav"))
             return "public/soundfiles/pianoa.wav"
         elif self.instrument.lower() == 'sax':
-            play(self.note_length_gen("public/soundfiles/saxa.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/saxa.wav"))
             return "public/soundfiles/saxa.wav"
         
     def a5sharp(self):
@@ -248,10 +239,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianoa#.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianoa#.wav"))
             return "public/soundfiles/pianoa#.wav"
         elif self.instrument.lower() == 'sax':
-            play(self.note_length_gen("public/soundfiles/saxa#.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/saxa#.wav"))
             return "public/soundfiles/saxa#.wav"
         
     def b5(self):
@@ -265,10 +256,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianob.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianob.wav"))
             return "public/soundfiles/pianob.wav"
         elif self.instrument.lower() == 'sax':
-            play(self.note_length_gen("public/soundfiles/saxb.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/saxb.wav"))
             return "public/soundfiles/saxb.wav"
         
     def c6(self):
@@ -282,10 +273,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            play(self.note_length_gen("public/soundfiles/pianohighc.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/pianohighc.wav"))
             return "public/soundfiles/pianohighc.wav"
         elif self.instrument.lower() == 'sax':
-            play(self.note_length_gen("public/soundfiles/saxhighc.wav"))
+            play(AudioSegment.from_wav("public/soundfiles/saxhighc.wav"))
             return "public/soundfiles/saxhighc.wav"    
     
         
@@ -306,6 +297,26 @@ class Song:
             self.wavfiles.append(choice)
             time.sleep(2)
             elapsed += 2000
+            
+    def compile_song_file(self):
+        
+        """ Turns file song into wav file and downloads it to directory
+        
+            Side Effects:
+            
+            Downloads song as wav file into directory.
+            
+        """
+        
+        infiles = self.wavfiles
+        outfile = f"public/out_songs/{self.name}.wav"
+        
+        wav_out = wave.open(outfile, 'wb')
+        for wav_path in infiles:
+            wav_in = wave.open(wav_path, 'rb')
+            if not wav_out.getnframes():
+                wav_out.setparams(wav_in.getparams())
+            wav_out.writeframes(wav_in.readframes(wav_in.getnframes()))   
             
             
 def parse_args(args_list):
@@ -336,6 +347,7 @@ if __name__ == "__main__":
     arguments = parse_args(sys.argv[1:])
     mysong = Song(arguments.instrument, arguments.name, arguments.key, int(arguments.duration))
     mysong.play_song()
+    mysong.compile_song_file()
 
     
 

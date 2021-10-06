@@ -5,6 +5,7 @@ const songName = document.getElementById('songname');
 const songKey = document.getElementById('keySelect');
 const songDuration = document.getElementById('duration')
 const screenDiv = document.getElementsByClassName('container')
+const downDiv = document.querySelector(".myButton")
 
 
 
@@ -14,6 +15,13 @@ function findChecked() {
             return(choice[i]);
         }
     }
+}
+
+function download() {
+  let element = document.createElement('button');
+  element.innerHTML = "Download";
+  downDiv.appendChild(element)
+
 }
 
 
@@ -36,4 +44,10 @@ songForm.addEventListener("submit", async (event) => {
       }).then(res => {
         console.log("Request complete! response:", res);
       });
+  
+      download(songName.value.replace(/\s/g, ""));
+      
+
+    
 });
+
