@@ -17,12 +17,12 @@ function findChecked() {
     }
 }
 
-function download() {
+/* function download() {
   let element = document.createElement('button');
   element.innerHTML = "Download";
   downDiv.appendChild(element)
 
-}
+} */
 
 
 songForm.addEventListener("submit", async (event) => {
@@ -45,7 +45,7 @@ songForm.addEventListener("submit", async (event) => {
         console.log("Request complete! response:", res);
       });
   
-      download(songName.value.replace(/\s/g, ""));
+      //download(songName.value.replace(/\s/g, ""));
       
 
     
