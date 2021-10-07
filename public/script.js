@@ -1,3 +1,6 @@
+import download from "downloadjs";
+import { EventEmitter } from "eventemitter";
+
 localStorage.clear();
 const songForm = document.querySelector('.songForm');
 const choice = document.getElementsByName('instrument');
@@ -44,10 +47,5 @@ songForm.addEventListener("submit", async (event) => {
       }).then(res => {
         console.log("Request complete! response:", res);
       });
-  
-      //download(songName.value.replace(/\s/g, ""));
-      
-
-    
 });
 

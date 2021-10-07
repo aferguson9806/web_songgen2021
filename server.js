@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 import {PythonShell} from 'python-shell';
 import http from 'http';
-import { createWriteStream } from 'fs';
+import  EventEmitter  from 'eventemitter';
 
 dotenv.config();
 
@@ -72,17 +72,9 @@ app.route('/song')
   PythonShell.run('public/songgenv2.py', options, function (err, results) {
     if (err) throw err;
     console.log('results: %j', results);
-    
-      let file = createWriteStream(req.body.songName + ".wav")
-      let request = http.get("http://localhost:3000/out_songs/" + file, function(response) {
-      console.log(response);
-      response.pipe(file);
-      });
   });
-
-
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`);
+  console.log(`Server listening on port ${port}!`);
 });
