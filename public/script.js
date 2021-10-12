@@ -1,6 +1,3 @@
-import download from "downloadjs";
-import { EventEmitter } from "eventemitter";
-
 localStorage.clear();
 const songForm = document.querySelector('.songForm');
 const choice = document.getElementsByName('instrument');
@@ -38,7 +35,7 @@ songForm.addEventListener("submit", async (event) => {
     //console.log(localStorage)
     songForm.reset();
     //console.log(JSON.stringify(data));
-    fetch("/song", {
+    await fetch("/song", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -47,5 +44,12 @@ songForm.addEventListener("submit", async (event) => {
       }).then(res => {
         console.log("Request complete! response:", res);
       });
+
+    const newLink = document.createElement('a');
+    newLink.href = "out_songs/" + songName.value.replace(/\s/g, "") + ".wav"
+    newLink.download = songName.value.replace(/\s/g, "") + ".wav"
+    document.body.appendChild(newLink);
+    newLink.click();
+    newLink.remove();
 });
 
