@@ -17,12 +17,9 @@ function findChecked() {
     }
 }
 
-/* function download() {
-  let element = document.createElement('button');
-  element.innerHTML = "Download";
-  downDiv.appendChild(element)
-
-} */
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 
 songForm.addEventListener("submit", async (event) => {
@@ -35,19 +32,19 @@ songForm.addEventListener("submit", async (event) => {
     //console.log(localStorage)
     songForm.reset();
     //console.log(JSON.stringify(data));
-    await fetch("/song", {
+    let fetchData = fetch("/song", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
           },
         body: JSON.stringify(data)
-      }).then(res => {
-        console.log("Request complete! response:", res);
       });
+    
+    await sleep(((parseInt(data.songDuration) * 1000) * 2) + 2000);
 
     const newLink = document.createElement('a');
-    newLink.href = "out_songs/" + songName.value.replace(/\s/g, "") + ".wav"
-    newLink.download = songName.value.replace(/\s/g, "") + ".wav"
+    newLink.href = "out_songs/" + data.songName + ".wav";
+    newLink.download = data.songName + ".wav";
     document.body.appendChild(newLink);
     newLink.click();
     newLink.remove();
