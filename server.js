@@ -3,10 +3,7 @@
 /* eslint-disable no-unused-vars */
 import express from 'express';
 import dotenv from 'dotenv';
-import fetch from 'node-fetch';
 import {PythonShell} from 'python-shell';
-import http from 'http';
-import  EventEmitter  from 'eventemitter';
 
 dotenv.config();
 
@@ -43,6 +40,10 @@ app.use((req, res, next) => {
     res.json({ data: json })
   }); */
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+};
+
 app.route('/results')
   .post(async (req, res) => {
     console.log('POST request detected');
@@ -73,6 +74,17 @@ app.route('/song')
     if (err) throw err;
     console.log('results: %j', results);
   });
+
+  await sleep(((req.body.songDuration * 1000) * 2) + 4000);
+
+  let optionsClear = {
+    args: ['public/out_songs/' + req.body.songName + '.wav']
+  }
+
+  PythonShell.run('public/clear.py', optionsClear, function (errClear, resultsClear) {
+    if (errClear) throw errClear;
+    console.log("file cleared", resultsClear)
+  })
 });
 
 app.listen(port, () => {

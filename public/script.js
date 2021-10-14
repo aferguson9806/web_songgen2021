@@ -48,5 +48,7 @@ songForm.addEventListener("submit", async (event) => {
     document.body.appendChild(newLink);
     newLink.click();
     newLink.remove();
+
+    
 });
 
