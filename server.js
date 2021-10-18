@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 import express from 'express';
 import dotenv from 'dotenv';
+import require from 'requirejs';
 let {PythonShell} = require('python-shell'); 
 
 dotenv.config();
