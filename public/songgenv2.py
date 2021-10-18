@@ -1,7 +1,7 @@
 import random
 import time
 from pydub import AudioSegment
-AudioSegment.ffmpeg = "/app/vendor/ffmpeg/ffmpeg.exe"
+#AudioSegment.ffmpeg = "/app/vendor/ffmpeg/ffmpeg.exe"
 from pydub.playback import play
 import wave
 import argparse
