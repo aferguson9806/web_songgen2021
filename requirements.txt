@@ -1,2 +1,4 @@
 argparse
 playsound
+pygobject
+encodings
