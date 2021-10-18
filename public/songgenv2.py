@@ -17,7 +17,7 @@ class Song:
     
     def __init__(self, instrument, name, key, duration):
         self.key = "self." + key
-        self.songinmilli = duration * 1000
+        self.noteCount = duration // 2
         self.name = name
         self.instrument = instrument        
         
@@ -290,11 +290,10 @@ class Song:
         
         elapsed = 0
         self.key = eval(self.key)
-        while elapsed < self.songinmilli:
+        while elapsed < self.noteCount:
             choice = random.choice(self.key)(mysong)
             self.wavfiles.append(choice)
-            time.sleep(2)
-            elapsed += 2000
+            elapsed += 1
             
     def compile_song_file(self):
         
