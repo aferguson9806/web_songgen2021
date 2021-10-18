@@ -1,3 +1,2 @@
-pydub
 argparse
-ffmpeg
+playsound
