@@ -72,10 +72,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianolowc.wav")
+            #playsound.playsound("public/soundfiles/pianolowc.wav")
             return "public/soundfiles/pianolowc.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxlowc.wav")
+            #playsound.playsound("public/soundfiles/saxlowc.wav")
             return "public/soundfiles/saxlowc.wav"
         
     def c5sharp(self):
@@ -89,10 +89,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianoc#.wav")
+            #playsound.playsound("public/soundfiles/pianoc#.wav")
             return "public/soundfiles/pianoc#.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxc#.wav")
+            #playsound.playsound("public/soundfiles/saxc#.wav")
             return "public/soundfiles/saxc#.wav"
         
     def d5(self):
@@ -106,10 +106,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianod.wav")
+            #playsound.playsound("public/soundfiles/pianod.wav")
             return "public/soundfiles/pianod.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxd.wav")
+            #playsound.playsound("public/soundfiles/saxd.wav")
             return "public/soundfiles/saxd.wav"
         
     def d5sharp(self):
@@ -123,10 +123,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianod#.wav")
+            #playsound.playsound("public/soundfiles/pianod#.wav")
             return "public/soundfiles/pianod#.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxd#.wav")
+            #playsound.playsound("public/soundfiles/saxd#.wav")
             return "public/soundfiles/saxd#.wav"
         
     def e5(self):
@@ -140,10 +140,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianoe.wav")
+            #playsound.playsound("public/soundfiles/pianoe.wav")
             return "public/soundfiles/pianoe.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxe.wav")
+            #playsound.playsound("public/soundfiles/saxe.wav")
             return "public/soundfiles/saxe.wav"
     def f5(self):
         
@@ -156,10 +156,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianof.wav")
+            #playsound.playsound("public/soundfiles/pianof.wav")
             return "public/soundfiles/pianof.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxf.wav")
+            #playsound.playsound("public/soundfiles/saxf.wav")
             return "public/soundfiles/saxf.wav"
         
     def f5sharp(self):
@@ -173,10 +173,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianof#.wav")
+            #playsound.playsound("public/soundfiles/pianof#.wav")
             return "public/soundfiles/pianof#.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxf#.wav")
+            #playsound.playsound("public/soundfiles/saxf#.wav")
             return "public/soundfiles/saxf#.wav"
         
     def g5(self):
@@ -190,10 +190,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianog.wav")
+            #playsound.playsound("public/soundfiles/pianog.wav")
             return "public/soundfiles/pianog.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxg.wav")
+            #playsound.playsound("public/soundfiles/saxg.wav")
             return "public/soundfiles/saxg.wav"
         
     def g5sharp(self):
@@ -207,10 +207,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianog#.wav")
+            #playsound.playsound("public/soundfiles/pianog#.wav")
             return "public/soundfiles/pianog#.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxg#.wav")
+            #playsound.playsound("public/soundfiles/saxg#.wav")
             return "public/soundfiles/saxg#.wav"
         
     def a5(self):
@@ -224,10 +224,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianoa.wav")
+            #playsound.playsound("public/soundfiles/pianoa.wav")
             return "public/soundfiles/pianoa.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxa.wav")
+            #playsound.playsound("public/soundfiles/saxa.wav")
             return "public/soundfiles/saxa.wav"
         
     def a5sharp(self):
@@ -241,10 +241,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianoa#.wav")
+            #playsound.playsound("public/soundfiles/pianoa#.wav")
             return "public/soundfiles/pianoa#.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxa#.wav")
+            #playsound.playsound("public/soundfiles/saxa#.wav")
             return "public/soundfiles/saxa#.wav"
         
     def b5(self):
@@ -258,10 +258,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianob.wav")
+            #playsound.playsound("public/soundfiles/pianob.wav")
             return "public/soundfiles/pianob.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxb.wav")
+            #playsound.playsound("public/soundfiles/saxb.wav")
             return "public/soundfiles/saxb.wav"
         
     def c6(self):
@@ -275,10 +275,10 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            playsound.playsound("public/soundfiles/pianohighc.wav")
+            #playsound.playsound("public/soundfiles/pianohighc.wav")
             return "public/soundfiles/pianohighc.wav"
         elif self.instrument.lower() == 'sax':
-            playsound.playsound("public/soundfiles/saxhighc.wav")
+            #playsound.playsound("public/soundfiles/saxhighc.wav")
             return "public/soundfiles/saxhighc.wav"    
     
         
