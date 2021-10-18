@@ -40,7 +40,7 @@ songForm.addEventListener("submit", async (event) => {
         body: JSON.stringify(data)
       });
     
-    //await sleep(((parseInt(data.songDuration) * 1000) * 2) + 2000);
+    await sleep(500);
 
     const newLink = document.createElement('a');
     newLink.href = "out_songs/" + data.songName + ".wav";
