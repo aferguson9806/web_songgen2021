@@ -462,7 +462,7 @@ class Song:
         self.key = eval(self.key)
         while elapsed < self.noteCount:
             choice = random.choice(self.key)(mysong)
-            self.wavfiles.append(choice)[0]
+            self.wavfiles.append(choice[0])
             elapsed += choice[1]
             
     def compile_song_file(self):
