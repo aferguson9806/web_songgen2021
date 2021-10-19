@@ -60,7 +60,7 @@ class Song:
         
     def c5(self):
         
-        """ Plays a c5 note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a c5 note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -72,25 +72,25 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianolowc.wav", 1
+                return ("public/soundfiles/pianolowc.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianolowchalf.wav", .5
+                return ("public/soundfiles/pianolowchalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianolowcquarter.wav", .25
+                return ("public/soundfiles/pianolowcquarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxlowc.wav", 1
+                return ("public/soundfiles/saxlowc.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxlowchalf.wav", .5
+                return ("public/soundfiles/saxlowchalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxlowcquarter.wav", .25
+                return ("public/soundfiles/saxlowcquarter.wav", .25)
         
     def c5sharp(self):
         
-        """ Plays a c5 sharp note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a c5 sharp note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -102,25 +102,25 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianoc#.wav", 1
+                return ("public/soundfiles/pianoc#.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianoc#half.wav", .5
+                return ("public/soundfiles/pianoc#half.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianoc#quarter.wav", .25
+                return ("public/soundfiles/pianoc#quarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxc#.wav", 1
+                return ("public/soundfiles/saxc#.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxc#half.wav", .5
+                return ("public/soundfiles/saxc#half.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxc#quarter.wav", .25
+                return ("public/soundfiles/saxc#quarter.wav", .25)
         
     def d5(self):
         
-        """ Plays a d5 note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a d5 note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -132,25 +132,25 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianod.wav", 1
+                return ("public/soundfiles/pianod.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianodhalf.wav", .5
+                return ("public/soundfiles/pianodhalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianodquarter.wav", .25
+                return ("public/soundfiles/pianodquarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxd.wav", 1
+                return ("public/soundfiles/saxd.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxdhalf.wav", .5
+                return ("public/soundfiles/saxdhalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxdquarter.wav", .25
+                return ("public/soundfiles/saxdquarter.wav", .25)
         
     def d5sharp(self):
         
-        """ Plays a d5 sharp note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a d5 sharp note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -162,25 +162,25 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianod#.wav", 1
+                return ("public/soundfiles/pianod#.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianod#half.wav", .5
+                return ("public/soundfiles/pianod#half.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianod#quarter.wav", .25
+                return ("public/soundfiles/pianod#quarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxd#.wav", 1
+                return ("public/soundfiles/saxd#.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxd#half.wav", .5
+                return ("public/soundfiles/saxd#half.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxd#quarter.wav", .25
+                return ("public/soundfiles/saxd#quarter.wav", .25)
         
     def e5(self):
         
-        """ Plays a e5 note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a e5 note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -192,24 +192,24 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianoe.wav", 1
+                return ("public/soundfiles/pianoe.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianoehalf.wav", .5
+                return ("public/soundfiles/pianoehalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianoequarter.wav", .25
+                return ("public/soundfiles/pianoequarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxe.wav", 1
+                return ("public/soundfiles/saxe.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxehalf.wav", .5
+                return ("public/soundfiles/saxehalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxequarter.wav", .25
+                return ("public/soundfiles/saxequarter.wav", .25)
     def f5(self):
         
-        """ Plays a f5 note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a f5 note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -221,25 +221,25 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianof.wav", 1
+                return ("public/soundfiles/pianof.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianofhalf.wav", .5
+                return ("public/soundfiles/pianofhalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianofquarter.wav", .25
+                return ("public/soundfiles/pianofquarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxf.wav", 1
+                return ("public/soundfiles/saxf.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxfhalf.wav", .5
+                return ("public/soundfiles/saxfhalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxfquarter.wav", .25
+                return ("public/soundfiles/saxfquarter.wav", .25)
         
     def f5sharp(self):
         
-        """ Plays a f5 sharp note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a f5 sharp note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -251,25 +251,25 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianof#.wav", 1
+                return ("public/soundfiles/pianof#.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianof#half.wav", .5
+                return ("public/soundfiles/pianof#half.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianof#quarter.wav", .25
+                return ("public/soundfiles/pianof#quarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxf#.wav", 1
+                return ("public/soundfiles/saxf#.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxf#half.wav", .5
+                return ("public/soundfiles/saxf#half.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxf#quarter.wav", .25
+                return ("public/soundfiles/saxf#quarter.wav", .25)
         
     def g5(self):
         
-        """ Plays a g5 note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a g5 note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -281,25 +281,25 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianog.wav", 1
+                return ("public/soundfiles/pianog.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianoghalf.wav", .5
+                return ("public/soundfiles/pianoghalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianogquarter.wav", .25
+                return ("public/soundfiles/pianogquarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxg.wav", 1
+                return ("public/soundfiles/saxg.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxghalf.wav", .5
+                return ("public/soundfiles/saxghalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxgquarter.wav", .25
+                return ("public/soundfiles/saxgquarter.wav", .25)
         
     def g5sharp(self):
         
-        """ Plays a g5 sharp note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a g5 sharp note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -311,25 +311,25 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianog#.wav", 1
+                return ("public/soundfiles/pianog#.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianog#half.wav", .5
+                return ("public/soundfiles/pianog#half.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianog#quarter.wav", .25
+                return ("public/soundfiles/pianog#quarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxg#.wav", 1
+                return ("public/soundfiles/saxg#.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxg#half.wav", .5
+                return ("public/soundfiles/saxg#half.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxg#quarter.wav", .25
+                return ("public/soundfiles/saxg#quarter.wav", .25)
         
     def a5(self):
         
-        """ Plays a a5 note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a a5 note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -341,25 +341,25 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianoa.wav", 1
+                return ("public/soundfiles/pianoa.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianoahalf.wav", .5
+                return ("public/soundfiles/pianoahalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianoaquarter.wav", .25
+                return ("public/soundfiles/pianoaquarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxa.wav", 1
+                return ("public/soundfiles/saxa.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxahalf.wav", .5
+                return ("public/soundfiles/saxahalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxaquarter.wav", .25
+                return ("public/soundfiles/saxaquarter.wav", .25)
         
     def a5sharp(self):
         
-        """ Plays a a5 sharp note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a a5 sharp note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -371,25 +371,25 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianoa#.wav", 1
+                return ("public/soundfiles/pianoa#.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianoa#half.wav", .5
+                return ("public/soundfiles/pianoa#half.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianoa#quarter.wav", .25
+                return ("public/soundfiles/pianoa#quarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxa#.wav", 1
+                return ("public/soundfiles/saxa#.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxa#half.wav", .5
+                return ("public/soundfiles/saxa#half.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxa#quarter.wav", .25
+                return ("public/soundfiles/saxa#quarter.wav", .25)
         
     def b5(self):
         
-        """ Plays a b5 note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a b5 note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -401,25 +401,25 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianob.wav", 1
+                return ("public/soundfiles/pianob.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianobhalf.wav", .5
+                return ("public/soundfiles/pianobhalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianobquarter.wav", .25
+                return ("public/soundfiles/pianobquarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxb.wav", 1
+                return ("public/soundfiles/saxb.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxbhalf.wav", .5
+                return ("public/soundfiles/saxbhalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxbquarter.wav", .25
+                return ("public/soundfiles/saxbquarter.wav", .25)
         
     def c6(self):
         
-        """ Plays a c6 note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
+        """ Plays a c6 note and return (s mp3 file of either a piano or saxophone playing it depending on which is chosen
 
             Returns:
             
@@ -431,21 +431,21 @@ class Song:
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/pianohighc.wav", 1
+                return ("public/soundfiles/pianohighc.wav", 1)
             if select == "half":
-                return "public/soundfiles/pianohighchalf.wav", .5
+                return ("public/soundfiles/pianohighchalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/pianohighcquarter.wav", .25
+                return ("public/soundfiles/pianohighcquarter.wav", .25)
         
         elif self.instrument.lower() == 'sax':
             
             select = random.choice(self.notes)
             if select == "whole":
-                return "public/soundfiles/saxhighc.wav", 1
+                return ("public/soundfiles/saxhighc.wav", 1)
             if select == "half":
-                return "public/soundfiles/saxhighchalf.wav", .5
+                return ("public/soundfiles/saxhighchalf.wav", .5)
             if select == "quarter":
-                return "public/soundfiles/saxhighcquarter.wav", .25  
+                return ("public/soundfiles/saxhighcquarter.wav", .25)  
     
         
         
