@@ -69,11 +69,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianolowc.wav")
-            return "public/soundfiles/pianolowc.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianolowc.wav"
+            if select == "half":
+                return "public/soundfiles/pianolowchalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianolowcquarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxlowc.wav")
-            return "public/soundfiles/saxlowc.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxlowc.wav"
+            if select == "half":
+                return "public/soundfiles/saxlowchalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxlowcquarter.wav"
         
     def c5sharp(self):
         
@@ -86,11 +99,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianoc#.wav")
-            return "public/soundfiles/pianoc#.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianoc#.wav"
+            if select == "half":
+                return "public/soundfiles/pianoc#half.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianoc#quarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxc#.wav")
-            return "public/soundfiles/saxc#.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxc#.wav"
+            if select == "half":
+                return "public/soundfiles/saxc#half.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxc#quarter.wav"
         
     def d5(self):
         
@@ -103,11 +129,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianod.wav")
-            return "public/soundfiles/pianod.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianod.wav"
+            if select == "half":
+                return "public/soundfiles/pianodhalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianodquarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxd.wav")
-            return "public/soundfiles/saxd.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxd.wav"
+            if select == "half":
+                return "public/soundfiles/saxdhalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxdquarter.wav"
         
     def d5sharp(self):
         
@@ -120,11 +159,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianod#.wav")
-            return "public/soundfiles/pianod#.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianod#.wav"
+            if select == "half":
+                return "public/soundfiles/pianod#half.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianod#quarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxd#.wav")
-            return "public/soundfiles/saxd#.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxd#.wav"
+            if select == "half":
+                return "public/soundfiles/saxd#half.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxd#quarter.wav"
         
     def e5(self):
         
@@ -137,11 +189,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianoe.wav")
-            return "public/soundfiles/pianoe.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianoe.wav"
+            if select == "half":
+                return "public/soundfiles/pianoehalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianoequarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxe.wav")
-            return "public/soundfiles/saxe.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxe.wav"
+            if select == "half":
+                return "public/soundfiles/saxehalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxequarter.wav"
     def f5(self):
         
         """ Plays a f5 note and returns mp3 file of either a piano or saxophone playing it depending on which is chosen
@@ -153,11 +218,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianof.wav")
-            return "public/soundfiles/pianof.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianof.wav"
+            if select == "half":
+                return "public/soundfiles/pianofhalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianofquarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxf.wav")
-            return "public/soundfiles/saxf.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxf.wav"
+            if select == "half":
+                return "public/soundfiles/saxfhalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxfquarter.wav"
         
     def f5sharp(self):
         
@@ -170,11 +248,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianof#.wav")
-            return "public/soundfiles/pianof#.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianof#.wav"
+            if select == "half":
+                return "public/soundfiles/pianof#half.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianof#quarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxf#.wav")
-            return "public/soundfiles/saxf#.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxf#.wav"
+            if select == "half":
+                return "public/soundfiles/saxf#half.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxf#quarter.wav"
         
     def g5(self):
         
@@ -187,11 +278,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianog.wav")
-            return "public/soundfiles/pianog.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianog.wav"
+            if select == "half":
+                return "public/soundfiles/pianoghalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianogquarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxg.wav")
-            return "public/soundfiles/saxg.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxg.wav"
+            if select == "half":
+                return "public/soundfiles/saxghalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxgquarter.wav"
         
     def g5sharp(self):
         
@@ -204,11 +308,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianog#.wav")
-            return "public/soundfiles/pianog#.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianog#.wav"
+            if select == "half":
+                return "public/soundfiles/pianog#half.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianog#quarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxg#.wav")
-            return "public/soundfiles/saxg#.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxg#.wav"
+            if select == "half":
+                return "public/soundfiles/saxg#half.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxg#quarter.wav"
         
     def a5(self):
         
@@ -221,11 +338,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianoa.wav")
-            return "public/soundfiles/pianoa.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianoa.wav"
+            if select == "half":
+                return "public/soundfiles/pianoahalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianoaquarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxa.wav")
-            return "public/soundfiles/saxa.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxa.wav"
+            if select == "half":
+                return "public/soundfiles/saxahalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxaquarter.wav"
         
     def a5sharp(self):
         
@@ -238,11 +368,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianoa#.wav")
-            return "public/soundfiles/pianoa#.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianoa#.wav"
+            if select == "half":
+                return "public/soundfiles/pianoa#half.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianoa#quarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxa#.wav")
-            return "public/soundfiles/saxa#.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxa#.wav"
+            if select == "half":
+                return "public/soundfiles/saxa#half.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxa#quarter.wav"
         
     def b5(self):
         
@@ -255,11 +398,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianob.wav")
-            return "public/soundfiles/pianob.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianob.wav"
+            if select == "half":
+                return "public/soundfiles/pianobhalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianobquarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxb.wav")
-            return "public/soundfiles/saxb.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxb.wav"
+            if select == "half":
+                return "public/soundfiles/saxbhalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxbquarter.wav"
         
     def c6(self):
         
@@ -272,11 +428,24 @@ class Song:
         """
         
         if self.instrument.lower() == 'piano':
-            #playsound.playsound("public/soundfiles/pianohighc.wav")
-            return "public/soundfiles/pianohighc.wav"
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/pianohighc.wav"
+            if select == "half":
+                return "public/soundfiles/pianohighchalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/pianohighcquarter.wav"
+        
         elif self.instrument.lower() == 'sax':
-            #playsound.playsound("public/soundfiles/saxhighc.wav")
-            return "public/soundfiles/saxhighc.wav"    
+            
+            select = random.choice(self.notes)
+            if select == "whole":
+                return "public/soundfiles/saxhighc.wav"
+            if select == "half":
+                return "public/soundfiles/saxhighchalf.wav"
+            if select == "quarter":
+                return "public/soundfiles/saxhighcquarter.wav"  
     
         
         
