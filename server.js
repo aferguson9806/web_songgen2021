@@ -75,17 +75,6 @@ app.route('/song')
     if (err) throw err;
     console.log('results: %j', results);
   });
-
-  await sleep(((req.body.songDuration * 1000) * 2) + 4000);
-
-  let optionsClear = {
-    args: ['public/out_songs/' + req.body.songName + '.wav']
-  }
-
-  PythonShell.run('public/clear.py', optionsClear, function (errClear, resultsClear) {
-    if (errClear) throw errClear;
-    console.log("file cleared", resultsClear)
-  })
 });
 
 app.listen(port, () => {

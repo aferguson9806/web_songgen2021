@@ -19,7 +19,8 @@ class Song:
         self.key = "self." + key
         self.noteCount = duration // 2
         self.name = name
-        self.instrument = instrument        
+        self.instrument = instrument
+        self.notes = ["whole", "half", "quarter"]      
         
         assert self.instrument in ['piano', 'sax'], "Nothing should print here"         #Tests that the users choice is 'piano' or 'sax'
         
