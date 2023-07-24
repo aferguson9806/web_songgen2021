@@ -9,7 +9,6 @@ let {PythonShell} = require('python-shell');
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 8000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -75,8 +74,4 @@ app.route('/song')
     if (err) throw err;
     console.log('results: %j', results);
   });
-});
-
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}!`);
 });
