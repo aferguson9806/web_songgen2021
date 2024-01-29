@@ -1,3 +1,8 @@
+import require from 'requirejs';
+let {PythonShell} = require('python-shell');
+
+
+
 localStorage.clear();
 const songForm = document.querySelector('.songForm');
 const choice = document.getElementsByName('instrument');
@@ -31,15 +36,12 @@ songForm.addEventListener("submit", async (event) => {
 
     //console.log(localStorage)
     songForm.reset();
-    //console.log(JSON.stringify(data));
-    let fetchData = fetch("/song", {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-          },
-        body: JSON.stringify(data)
-      });
-    
+
+    PythonShell.run('public/songgenv2.py', data, function (err, results) {
+      if (err) throw err;
+      console.log('results: %j', results)
+    })
+
     await sleep(500);
 
     const newLink = document.createElement('a');
@@ -49,6 +51,6 @@ songForm.addEventListener("submit", async (event) => {
     newLink.click();
     newLink.remove();
 
-    
+
 });
 
